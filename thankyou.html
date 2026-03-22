@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You | MassServices</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+  <style>
+    :root {
+      --primary: #0d5fd8;
+      --primary-dark: #083d8c;
+      --text: #11223a;
+      --muted: #5f7088;
+      --shadow: 0 24px 60px rgba(12, 54, 122, 0.14);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 1.25rem;
+      font-family: "Poppins", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(93, 184, 255, 0.24), transparent 28%),
+        linear-gradient(180deg, #f9fcff 0%, #eef6ff 100%);
+    }
+
+    .thankyou-card {
+      width: min(100%, 680px);
+      padding: 2.4rem;
+      border-radius: 28px;
+      background: rgba(255, 255, 255, 0.92);
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 72px;
+      height: 72px;
+      border-radius: 20px;
+      margin-bottom: 1.2rem;
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+      color: #fff;
+      font-size: 1.4rem;
+      font-weight: 800;
+    }
+
+    h1 {
+      margin: 0 0 0.8rem;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.1;
+    }
+
+    p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1.6rem;
+      min-height: 3rem;
+      padding: 0.85rem 1.3rem;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <main class="thankyou-card">
+    <div class="badge">MS</div>
+    <h1>Thank You</h1>
+    <p>
+      Your inquiry has been submitted successfully. MassServices will get back to you
+      soon with the next steps.
+    </p>
+    <a href="index.html">Back to Home</a>
+  </main>
+</body>
+</html>
