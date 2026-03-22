@@ -35,14 +35,17 @@
         <span></span>
         <span></span>
       </button>
-      <nav class="nav-links" aria-label="Primary">
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#features">Why Us</a>
-        <a href="#testimonials">Reviews</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <a class="nav-cta" href="#contact">Book Consultation</a>
+      <div class="nav-menu">
+        <nav class="nav-links" aria-label="Primary">
+          <a href="#home">Home</a>
+          <a href="#services">Services</a>
+          <a href="#features">Why Us</a>
+          <a href="#testimonials">Reviews</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <a class="nav-cta" href="#contact">Book Consultation</a>
+      </div>
+      <div class="nav-backdrop" aria-hidden="true"></div>
     </div>
   </header>
 
@@ -453,8 +456,9 @@
 
     const revealItems = document.querySelectorAll("[data-reveal]");
     const navLinks = document.querySelectorAll(".nav-links a");
-    const navLinksWrap = document.querySelector(".nav-links");
+    const navMenu = document.querySelector(".nav-menu");
     const navToggle = document.querySelector(".nav-toggle");
+    const navBackdrop = document.querySelector(".nav-backdrop");
     const sections = document.querySelectorAll("main section[id]");
     const faqButtons = document.querySelectorAll(".faq-question");
     const header = document.querySelector(".site-header");
@@ -496,19 +500,42 @@
       sectionObserver.observe(section);
     });
 
-    if (navToggle && navLinksWrap) {
+    if (navToggle && navMenu) {
+      const closeMenu = () => {
+        navMenu.classList.remove("is-open");
+        navToggle.classList.remove("is-open");
+        navToggle.setAttribute("aria-expanded", "false");
+        document.body.classList.remove("menu-open");
+      };
+
       navToggle.addEventListener("click", () => {
-        const isOpen = navLinksWrap.classList.toggle("is-open");
+        const isOpen = !navMenu.classList.contains("is-open");
+        navMenu.classList.toggle("is-open", isOpen);
         navToggle.classList.toggle("is-open", isOpen);
         navToggle.setAttribute("aria-expanded", String(isOpen));
+        document.body.classList.toggle("menu-open", isOpen);
       });
 
       navLinks.forEach((link) => {
         link.addEventListener("click", () => {
-          navLinksWrap.classList.remove("is-open");
-          navToggle.classList.remove("is-open");
-          navToggle.setAttribute("aria-expanded", "false");
+          closeMenu();
         });
+      });
+
+      if (navBackdrop) {
+        navBackdrop.addEventListener("click", closeMenu);
+      }
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 640) {
+          closeMenu();
+        }
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          closeMenu();
+        }
       });
     }
 
