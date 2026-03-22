@@ -1260,6 +1260,12 @@ img {
     max-width: 100%;
   }
 
+  .features-heading-card,
+  .features-highlight,
+  .contact-panel-wide {
+    padding: 1.6rem;
+  }
+
   .services-grid,
   .process-strip {
     grid-template-columns: 1fr 1fr;
@@ -1271,6 +1277,16 @@ img {
 
   .hero-grid {
     min-height: auto;
+  }
+
+  .hero-copy {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .typed-wrap,
+  .scroll-cue {
+    justify-content: center;
   }
 
   .floating-tag {
@@ -1287,14 +1303,26 @@ img {
 }
 
 @media (max-width: 640px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
   .nav {
     flex-direction: column;
     align-items: stretch;
+    padding: 0.9rem 0;
+  }
+
+  .brand {
+    justify-content: center;
   }
 
   .nav-links {
+    justify-content: center;
     flex-wrap: wrap;
     gap: 0.9rem 1rem;
+    text-align: center;
   }
 
   .nav-cta {
@@ -1315,6 +1343,35 @@ img {
     padding: 3.4rem 0;
   }
 
+  .hero-copy {
+    text-align: center;
+  }
+
+  .eyebrow {
+    margin-bottom: 0.75rem;
+  }
+
+  .hero h1,
+  .section-heading h2,
+  .contact-panel h3 {
+    line-height: 1.15;
+  }
+
+  .typed-wrap {
+    width: 100%;
+    min-height: 3.4rem;
+    padding: 0.95rem 1rem;
+  }
+
+  .typed-text {
+    font-size: 1rem;
+  }
+
+  .scroll-cue {
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
   .hero-card,
   .service-showcase,
   .feature-card,
@@ -1323,18 +1380,68 @@ img {
     border-radius: 22px;
   }
 
+  .features-heading-card,
+  .features-highlight,
+  .feature-card,
+  .testimonial-card,
+  .contact-panel-wide,
+  .service-showcase,
+  .faq-item {
+    padding: 1.25rem;
+  }
+
   .services-grid,
   .process-strip {
     grid-template-columns: 1fr;
   }
 
-  .typed-wrap {
-    width: 100%;
-    min-height: 3.4rem;
+  .hero-visual {
+    min-height: 200px;
   }
 
-  .hero-visual {
-    min-height: 210px;
+  .ring-one {
+    width: 170px;
+    height: 170px;
+  }
+
+  .ring-two {
+    width: 120px;
+    height: 120px;
+  }
+
+  .ring-three {
+    width: 72px;
+    height: 72px;
+  }
+
+  .hero-center-badge {
+    padding: 0.85rem 1.1rem;
+    font-size: 1rem;
+  }
+
+  .floating-tag {
+    padding: 0.45rem 0.7rem;
+    font-size: 0.74rem;
+  }
+
+  .tag-one {
+    top: 18px;
+    left: 14px;
+  }
+
+  .tag-two {
+    top: 52px;
+    right: 14px;
+  }
+
+  .tag-three {
+    bottom: 58px;
+    left: 10px;
+  }
+
+  .tag-four {
+    right: 16px;
+    bottom: 16px;
   }
 
   .panel-one,
@@ -1354,5 +1461,18 @@ img {
   .contact-info-grid,
   .contact-panel-actions {
     grid-template-columns: 1fr;
+  }
+
+  .contact-panel-actions .btn {
+    width: 100%;
+  }
+
+  .faq-question {
+    padding: 1rem 1.05rem;
+    font-size: 0.95rem;
+  }
+
+  .faq-answer p {
+    padding: 0 1.05rem 1.05rem;
   }
 }
