@@ -68,17 +68,30 @@
 
         <div class="hero-card" data-reveal="right">
           <div class="hero-visual" aria-hidden="true">
+            <div class="hero-depth-grid"></div>
+            <div class="hero-depth-glow glow-one"></div>
+            <div class="hero-depth-glow glow-two"></div>
             <div class="light-beam beam-one"></div>
             <div class="light-beam beam-two"></div>
             <div class="ring ring-one"></div>
             <div class="ring ring-two"></div>
             <div class="ring ring-three"></div>
+            <div class="hero-orbit orbit-one"></div>
+            <div class="hero-orbit orbit-two"></div>
             <div class="floating-tag tag-one">PAN</div>
             <div class="floating-tag tag-two">ITR</div>
             <div class="floating-tag tag-three">Tax</div>
             <div class="floating-tag tag-four">Docs</div>
             <div class="glass-panel panel-one"></div>
             <div class="glass-panel panel-two"></div>
+            <div class="hero-mini-card mini-card-one">
+              <strong>Fast</strong>
+              <span>Guidance</span>
+            </div>
+            <div class="hero-mini-card mini-card-two">
+              <strong>Secure</strong>
+              <span>Support</span>
+            </div>
             <div class="hero-center-badge">Welcome</div>
           </div>
         </div>
@@ -150,37 +163,52 @@
       <div class="container">
         <div class="features-heading-card section-heading" data-reveal="up">
           <p class="eyebrow">Why Choose MassServices</p>
-          <h2>Why clients trust MassServices for tax and document work</h2>
+          <h2>Trusted guidance for tax, filing, and document support</h2>
           <p>
-            We focus on making every service feel organized, understandable, and
-            professionally handled from the first inquiry to final submission.
+            We combine clear communication, careful document handling, and a simple
+            process so clients feel confident from the first call to final submission.
           </p>
           <div class="features-heading-points">
-            <span>Fast support</span>
-            <span>Clear communication</span>
-            <span>Reliable service flow</span>
+            <span>Simple process</span>
+            <span>Reliable support</span>
+            <span>Professional handling</span>
           </div>
         </div>
         <div class="features-layout">
           <article class="features-highlight" data-reveal="left">
+            <div class="features-badge-row">
+              <span class="feature-badge">Trusted Service</span>
+              <span class="feature-badge">Friendly Help</span>
+            </div>
             <p class="mini-label">MassServices Advantage</p>
-            <h3>Simple support with a professional process</h3>
+            <h3>A smoother experience for every service request</h3>
             <p>
-              Whether you need PAN card help, ITR filing, or tax return support, we
-              keep the process clear, timely, and easy to follow.
+              Whether you need PAN card help, ITR filing, tax return support, or
+              document guidance, we make the process feel structured, calm, and easy
+              to understand.
             </p>
+            <div class="features-metric-grid">
+              <div class="metric-card">
+                <strong>Step-by-step</strong>
+                <span>Clear guidance without confusion</span>
+              </div>
+              <div class="metric-card">
+                <strong>Timely Support</strong>
+                <span>Quick replies and organized follow-up</span>
+              </div>
+              <div class="metric-card">
+                <strong>Professional Care</strong>
+                <span>Prepared carefully for better confidence</span>
+              </div>
+            </div>
             <div class="highlight-points">
               <div class="highlight-line">
-                <strong>Clear Process</strong>
-                <span>Easy guidance at every step</span>
+                <strong>Document clarity</strong>
+                <span>Know what is needed before you begin</span>
               </div>
               <div class="highlight-line">
-                <strong>Accurate Work</strong>
-                <span>Prepared with care and attention</span>
-              </div>
-              <div class="highlight-line">
-                <strong>Quick Response</strong>
-                <span>Fast communication and updates</span>
+                <strong>Service transparency</strong>
+                <span>Simple explanations and fewer surprises</span>
               </div>
             </div>
           </article>
@@ -188,46 +216,46 @@
           <div class="feature-grid">
             <article class="feature-card" data-reveal="up">
               <div class="icon-circle">01</div>
-              <h3>Accurate Filing</h3>
+              <h3>Clear Advice</h3>
               <p>
-                We help reduce mistakes in applications and returns so your documents
-                are prepared carefully and more confidently.
+                We explain services and document needs in simple language so clients
+                always understand the next step.
               </p>
             </article>
             <article class="feature-card" data-reveal="up">
               <div class="icon-circle">02</div>
-              <h3>Fast Turnaround</h3>
+              <h3>Organized Process</h3>
               <p>
-                Our workflow is designed to move your work ahead quickly and avoid
-                unnecessary delays wherever possible.
+                From inquiry to submission, each stage is handled in a structured way
+                to reduce confusion and save time.
               </p>
             </article>
             <article class="feature-card" data-reveal="up">
               <div class="icon-circle">03</div>
-              <h3>Easy-to-Understand Guidance</h3>
+              <h3>Attention to Detail</h3>
               <p>
-                You get simple explanations and practical support instead of confusing
-                tax language and unclear steps.
+                Applications, returns, and supporting documents are reviewed with care
+                so the work feels more accurate and dependable.
               </p>
             </article>
             <article class="feature-card" data-reveal="up">
               <div class="icon-circle">04</div>
-              <h3>Reliable Document Support</h3>
+              <h3>Responsive Support</h3>
               <p>
-                We help you prepare the right documents before submission, saving time
-                and reducing back-and-forth corrections.
+                Clients get quicker answers, better follow-up, and helpful guidance
+                whenever they need support.
               </p>
             </article>
           </div>
         </div>
         <div class="feature-summary" data-reveal="up">
           <div class="summary-item">
-            <strong>Client-first support</strong>
-            <span>Friendly help for individuals and businesses</span>
+            <strong>Built for individuals and small businesses</strong>
+            <span>Support that feels approachable, practical, and professional</span>
           </div>
           <div class="summary-item">
-            <strong>Better clarity</strong>
-            <span>Simple communication from start to finish</span>
+            <strong>Designed to reduce stress</strong>
+            <span>Better clarity, better preparation, and a better client experience</span>
           </div>
         </div>
       </div>
@@ -461,6 +489,7 @@
     const sections = document.querySelectorAll("main section[id]");
     const faqButtons = document.querySelectorAll(".faq-question");
     const header = document.querySelector(".site-header");
+    const heroVisual = document.querySelector(".hero-visual");
 
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -562,6 +591,24 @@
 
       header.classList.toggle("is-scrolled", window.scrollY > 24);
     });
+
+    if (heroVisual && window.innerWidth > 900) {
+      const updateHeroTilt = (event) => {
+        const rect = heroVisual.getBoundingClientRect();
+        const pointerX = (event.clientX - rect.left) / rect.width - 0.5;
+        const pointerY = (event.clientY - rect.top) / rect.height - 0.5;
+
+        heroVisual.style.setProperty("--pointer-x", `${pointerX.toFixed(3)}`);
+        heroVisual.style.setProperty("--pointer-y", `${pointerY.toFixed(3)}`);
+      };
+
+      heroVisual.addEventListener("mousemove", updateHeroTilt);
+
+      heroVisual.addEventListener("mouseleave", () => {
+        heroVisual.style.setProperty("--pointer-x", "0");
+        heroVisual.style.setProperty("--pointer-y", "0");
+      });
+    }
 
     document.addEventListener("DOMContentLoaded", typeEffect);
   </script>
